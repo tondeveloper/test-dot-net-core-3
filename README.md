@@ -1,4 +1,8 @@
-# aspnet-core-3-jwt-authentication-api
+# WebApi
+
+Sample project with Redis cache & xUnit Testing
+
+Project was forked from:
 
 ASP.NET Core 3.0 - JWT Authentication API
 

@@ -28,10 +28,7 @@ namespace WebApi
             services.AddCors();
             services.AddControllers();
 
-            //services.AddMvc(option => option.EnableEndpointRouting = false)
-            //    .AddJsonOptions(x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
-
-            // configure redis store
+            // configure redis store @TODO replace config with ENV reference
             services.AddDistributedMemoryCache();
             services.AddStackExchangeRedisCache(options =>
             {
@@ -66,7 +63,7 @@ namespace WebApi
 
             // configure DI for application services
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<ISomeService, SomeClassorette>();
+            services.AddScoped<ISomeService, SomeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

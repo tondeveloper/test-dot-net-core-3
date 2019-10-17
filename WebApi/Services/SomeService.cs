@@ -34,13 +34,13 @@ namespace Some.Services
     }
 
     //main class
-    public class SomeClassorette : ISomeService
+    public class SomeService : ISomeService
     {
         private List<SomeProperty> _user { get; set; }
         private IDistributedCache _cache { get; set; }
 
         //DI cache
-        public SomeClassorette(IDistributedCache cache)
+        public SomeService(IDistributedCache cache)
         {
             _user = new List<SomeProperty>();
             _cache = cache;

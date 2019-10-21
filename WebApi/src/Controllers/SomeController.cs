@@ -65,5 +65,14 @@ namespace WebApi.Controllers
 
             return Ok("clear");
         }
+        [AllowAnonymous]
+        [HttpPost("some")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public IActionResult Some()
+        {
+            //return some json
+            return Ok(new { some="123"});
+        }
     }
 }
